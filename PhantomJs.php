@@ -50,6 +50,7 @@ class PhantomJs implements PluginContract
             print_r($response->getConsole());
         }
         $html = '<html>'.$response->getContent().'</html>';
+        $queryList->setResponse($response);
         $queryList->setHtml($html);
         return $queryList;
     }
